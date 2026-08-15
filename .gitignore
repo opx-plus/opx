@@ -80,7 +80,5 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
-
 build.bat
-
 dist/opx.pas
