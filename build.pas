@@ -96,7 +96,9 @@ const
 
 {$include code/PasModifiers.Intf.pas}
 {$include code/PasModifiers.Impl.pas}
-{$include code/PasModifiers.Test.pas}
+{$ifdef OPX_TESTS}
+    {$include code/PasModifiers.Test.pas}
+{$endif}
 
 var
     ExitText : string = '';
@@ -194,8 +196,9 @@ begin
     StrImplementation := TStringList.Create;
     StrInitialization := TStringList.Create;
     StrFinalization := TStringList.Create;
-
-    {$include code/PasModifiers.Init.pas}
+    {$ifdef OPX_TESTS}
+        {$include code/PasModifiers.Init.pas}
+    {$endif}
 {% term initialization %}
 end;
 

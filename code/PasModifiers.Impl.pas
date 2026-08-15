@@ -147,7 +147,8 @@ begin
     Result := Self in [
         pmVarargs,
         pmNoreturn,
-        pmResult
+        pmResult,
+        pmInline
     ];
 end;
 
