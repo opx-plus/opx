@@ -1,1 +1,0 @@
-    RegisterTest(TPasModifierTests);
