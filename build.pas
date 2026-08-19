@@ -104,7 +104,6 @@ var
     ExitText : string = '';
     StrInterface, StrImplementation, StrInitialization, StrFinalization : TStringList;
 
-
 {% term interface %}
 
 procedure Test; {$ifdef OPX_PROGRAM_OR_LIBRARY} forward; {$endif}
@@ -112,6 +111,15 @@ procedure Test; {$ifdef OPX_PROGRAM_OR_LIBRARY} forward; {$endif}
 {$ifdef OPX_UNIT}
 implementation
 {$endif}
+
+type
+  TMinhaClasse = class
+    procedure Teste; virtual; final;
+  end;
+
+procedure TMinhaClasse.Teste;
+begin
+end;
 
 {% init uses_local %}
 {% term uses_local %}
